@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="questao" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="1710b0de-b4df-4f23-9647-2b4f6c225ccd">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="AtendeNR12">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{atende}=="SIM"]]></conditionExpression>
+			<style mode="Opaque" forecolor="#FFFFFF" backcolor="#005CAA"/>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{atende}=="NÃO"]]></conditionExpression>
+			<style mode="Opaque" forecolor="#FFFFFF" backcolor="#FF0000"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="pergunta" class="br.com.nr12.model.Pergunta">
+		<fieldDescription><![CDATA[pergunta]]></fieldDescription>
+	</field>
+	<field name="dispositivo" class="br.com.nr12.model.Dispositivo">
+		<fieldDescription><![CDATA[dispositivo]]></fieldDescription>
+	</field>
+	<field name="resposta" class="br.com.nr12.model.Resposta">
+		<fieldDescription><![CDATA[resposta]]></fieldDescription>
+	</field>
+	<variable name="atende" class="java.lang.String">
+		<variableExpression><![CDATA[($F{resposta}.getId()==$F{pergunta}.getRespostaCorreta().getId()?"SIM":"NÃO")]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="172" height="28" forecolor="#005CAA" uuid="06dd7d5b-23ce-438a-869e-4b39a95b9b11">
+					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Medidas de Segurança]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="0" width="22" height="28" forecolor="#005CAA" uuid="f9ee4331-9944-47c3-933d-fb2dd1246419">
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[SIM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="194" y="0" width="22" height="28" forecolor="#005CAA" uuid="b92de5aa-3b2d-4314-8a87-05f935cede03">
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[NÃO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="0" width="22" height="28" forecolor="#005CAA" uuid="cfb989f3-97e2-4aee-b53f-84c848186211">
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[NA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="238" y="0" width="45" height="28" forecolor="#005CAA" uuid="b6a22be9-8eb9-4470-9e40-cd35d6aadc22">
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="9"/>
+				</textElement>
+				<text><![CDATA[Atende a NR-12]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="172" height="20" uuid="b02f0ae2-55a9-4a66-8364-fbff41190703"/>
+				<box>
+					<pen lineColor="#005CAA"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pergunta}.getPergunta()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="172" y="0" width="22" height="20" uuid="96b9a7cf-8b30-4074-86e2-f2d414910990">
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+				<box>
+					<pen lineColor="#005CAA"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($F{resposta}.getResposta().equals("SIM")?"X":"")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="194" y="0" width="22" height="20" uuid="a2caa7d2-d890-432c-9eed-5269095b7cf9">
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+				<box>
+					<pen lineColor="#005CAA"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($F{resposta}.getResposta().equals("NÃO")?"X":"")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="216" y="0" width="22" height="20" uuid="ee04a092-457b-44e7-b602-5cd4945ad86e">
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+				<box>
+					<pen lineColor="#005CAA"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($F{resposta}.getResposta().equals("NA")?"X":"")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="AtendeNR12" mode="Opaque" x="238" y="0" width="45" height="20" uuid="023c25c1-e090-4437-b761-f9afa1296949"/>
+				<box>
+					<pen lineColor="#005CAA"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($F{resposta}.getId()==$F{pergunta}.getRespostaCorreta().getId()?"SIM":"NÃO")]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

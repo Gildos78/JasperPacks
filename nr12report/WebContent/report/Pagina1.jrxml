@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Master" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="14" bottomMargin="14" uuid="79315e63-51a0-4de3-a52d-b46d2703daa3">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="bnIxMi5jbGllbnRlICwxNSwxNSwxNmZjMzY3Mi04MDg4LTQ3MmQtODFkYi03NTQ1ZTZkNWEzZjI7"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CollectionLaudo"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="647"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="353"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="logoSenai" class="java.lang.String"/>
+	<parameter name="laudo" class="br.com.nr12.model.Laudo"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM nr12.cliente]]>
+	</queryString>
+	<field name="maquina" class="br.com.nr12.model.Maquina">
+		<fieldDescription><![CDATA[maquina]]></fieldDescription>
+	</field>
+	<field name="limitesMaquina" class="java.lang.String">
+		<fieldDescription><![CDATA[limitesMaquina]]></fieldDescription>
+	</field>
+	<field name="usuario" class="br.com.nr12.model.Usuario">
+		<fieldDescription><![CDATA[usuario]]></fieldDescription>
+	</field>
+	<field name="dataInicial" class="java.sql.Date">
+		<fieldDescription><![CDATA[dataInicial]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="dataFinal" class="java.sql.Date">
+		<fieldDescription><![CDATA[dataFinal]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[status]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="36">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<line>
+				<reportElement x="0" y="0" width="595" height="1" uuid="fb162926-10b2-4c5d-b2e8-2098e435be76">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="5.0" lineStyle="Solid" lineColor="#005CAA"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="35" width="595" height="1" uuid="b9a482f4-0fc1-428a-972e-2c23971d4b7e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="5.0" lineStyle="Solid" lineColor="#005CAA"/>
+				</graphicElement>
+			</line>
+			<image hAlign="Center" vAlign="Middle" onErrorType="Blank">
+				<reportElement x="50" y="9" width="150" height="20" uuid="dfc7b2c0-d11b-41c2-bbcd-f9591a749df3">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA["../imagens/sesi_logo2.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="208" y="8" width="50" height="20" forecolor="#005CAA" uuid="dd041b04-3fad-450a-85c8-e7e7792bb617">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[NR-12]]></text>
+			</staticText>
+			<line>
+				<reportElement x="277" y="8" width="1" height="20" uuid="1fad7219-185e-4f3a-85da-d9103165754e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="290" y="8" width="259" height="20" forecolor="#005CAA" uuid="420c4cef-e79e-46ad-9f39-49edb68af089">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{laudo}.getCodigo()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="706" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<staticText>
+				<reportElement mode="Transparent" x="20" y="250" width="555" height="50" forecolor="#005CAA" uuid="eb7f2b32-4dca-4c47-8b35-5c09b6c7b51e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="28"/>
+				</textElement>
+				<text><![CDATA[Laudo com apreciação de risco]]></text>
+			</staticText>
+			<line>
+				<reportElement x="20" y="300" width="555" height="1" uuid="6096b5f8-3e2f-4a11-b99b-b5a0e7eb69dd">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="20" y="350" width="555" height="1" uuid="732c5adf-d86e-4178-9c3b-206ce993d8b7">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement mode="Transparent" x="20" y="350" width="555" height="75" uuid="c2d4488f-c78b-470c-9d15-187c4bdb83b3">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="22"/>
+				</textElement>
+				<text><![CDATA[NR-12 SEGURAN�A NO TRABALHO
+EM MAQUINAS E EQUIPAMENTOS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="20" y="425" width="555" height="1" uuid="71681822-868e-4165-ac1d-0c79276813e6">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="20" y="300" width="555" height="50" forecolor="#005CAA" uuid="5a2e3092-7755-460c-babd-50f646ddfd4c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{maquina}.getNome()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="425" width="555" height="50" forecolor="#005CAA" uuid="4d9ae3b9-120a-4cd9-8f4f-2d6b0cf4e3c9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Empresa: "+$F{maquina}.getCliente().getNome()]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="40">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<image scaleImage="RetainShape" hAlign="Left" vAlign="Middle" onErrorType="Blank">
+				<reportElement x="50" y="12" width="150" height="20" uuid="e24ff03f-b186-4a5e-b40d-08b22378553f">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA["http://localhost:3000/cliente/"+
+$P{laudo}.getMaquina().getCliente().getId()+
+"/imagem/"+
+$P{laudo}.getMaquina().getCliente().getImagem()]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="0" y="5" width="595" height="1" uuid="16c53b29-df4f-496c-80db-58976aed8ff0">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="5.0" lineStyle="Solid" lineColor="#005CAA"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Master" pageWidth="595" pageHeight="841" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="14" bottomMargin="14" uuid="79315e63-51a0-4de3-a52d-b46d2703daa3">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="bnIxMi5jbGllbnRlICwxNSwxNSwxNmZjMzY3Mi04MDg4LTQ3MmQtODFkYi03NTQ1ZTZkNWEzZjI7"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CollectionNormaTecnica"/>
+	<property name="com.jaspersoft.studio.unit." value="mm"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="mm"/>
+	<subDataset name="Dataset1" uuid="9716aac3-a3c7-4fc1-a3f1-79060d35e0b1">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="laudo" class="br.com.nr12.model.Laudo"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT *
+FROM nr12.cliente]]>
+	</queryString>
+	<field name="codigo" class="java.lang.String">
+		<fieldDescription><![CDATA[codigo]]></fieldDescription>
+	</field>
+	<field name="normasTecnicas" class="java.util.List">
+		<fieldDescription><![CDATA[normasTecnicas]]></fieldDescription>
+	</field>
+	<field name="disposicaoFinal" class="java.util.List">
+		<fieldDescription><![CDATA[disposicaoFinal]]></fieldDescription>
+	</field>
+	<field name="imagem" class="java.lang.String">
+		<fieldDescription><![CDATA[imagem]]></fieldDescription>
+	</field>
+	<field name="dispositivos" class="java.util.List">
+		<fieldDescription><![CDATA[dispositivos]]></fieldDescription>
+	</field>
+	<field name="pontosPerigo" class="java.util.List">
+		<fieldDescription><![CDATA[pontosPerigo]]></fieldDescription>
+	</field>
+	<field name="maquina" class="br.com.nr12.model.Maquina">
+		<fieldDescription><![CDATA[maquina]]></fieldDescription>
+	</field>
+	<field name="limitesMaquina" class="java.lang.String">
+		<fieldDescription><![CDATA[limitesMaquina]]></fieldDescription>
+	</field>
+	<field name="usuario" class="br.com.nr12.model.Usuario">
+		<fieldDescription><![CDATA[usuario]]></fieldDescription>
+	</field>
+	<field name="dataInicial" class="java.sql.Date">
+		<fieldDescription><![CDATA[dataInicial]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="responsavel" class="br.com.nr12.model.Usuario">
+		<fieldDescription><![CDATA[responsavel]]></fieldDescription>
+	</field>
+	<field name="dataFinal" class="java.sql.Date">
+		<fieldDescription><![CDATA[dataFinal]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[status]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="36">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<line>
+				<reportElement x="0" y="0" width="595" height="1" uuid="12372cf6-355e-4bed-a3c8-81dfc5044130">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="5.0" lineStyle="Solid" lineColor="#005CAA"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="35" width="595" height="1" uuid="18e83ca7-612a-4fbe-a6f1-dfe1f78a1972">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="5.0" lineStyle="Solid" lineColor="#005CAA"/>
+				</graphicElement>
+			</line>
+			<image hAlign="Center" vAlign="Middle" onErrorType="Blank">
+				<reportElement x="50" y="9" width="150" height="20" uuid="4249d230-a425-43de-a5eb-f6f4000d8f67">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA["../imagens/sesi_logo2.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="208" y="8" width="50" height="20" forecolor="#005CAA" uuid="8d422e5f-01d4-4cb4-91ef-62af2f1de4fd">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[NR-12]]></text>
+			</staticText>
+			<line>
+				<reportElement x="277" y="8" width="1" height="20" uuid="8cc8c242-4ed5-48b9-9cc7-538c8fbed916">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="290" y="8" width="259" height="20" forecolor="#005CAA" uuid="ed35cf7c-fe30-473d-8770-5f37348c73bb">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{laudo}.getCodigo()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="202" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<frame>
+				<reportElement x="85" y="72" width="425" height="48" uuid="251457e7-1825-4aad-b193-dac669adb5cf">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box topPadding="15" bottomPadding="15">
+					<pen lineColor="#005CAA"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+				</box>
+				<subreport>
+					<reportElement x="0" y="-8" width="425" height="23" uuid="53ebb7ad-696e-40a4-b4da-37f6cdb213d6">
+						<property name="com.jaspersoft.studio.unit.y" value="mm"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{disposicaoFinal})]]></dataSourceExpression>
+					<subreportExpression><![CDATA["disposicaoFinal.jasper"]]></subreportExpression>
+				</subreport>
+			</frame>
+			<staticText>
+				<reportElement mode="Opaque" x="85" y="42" width="425" height="30" forecolor="#005CAA" backcolor="#9ED0D9" uuid="27b20365-3715-4b94-84ce-a7a84cc5ff03"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph lineSpacing="Single" firstLineIndent="0"/>
+				</textElement>
+				<text><![CDATA[Descrição]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="85" y="14" width="425" height="30" forecolor="#005CAA" uuid="d91c97c9-9cdb-4206-81f7-ed6bd1a9b8ab">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Calibri" size="14"/>
+					<paragraph spacingBefore="0"/>
+				</textElement>
+				<text><![CDATA[13. Disposições Finais]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="86" y="140" width="425" height="30" forecolor="#005CAA" backcolor="#9ED0D9" uuid="5f919892-de23-40d2-8c09-14fa867c4cf8"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<paragraph lineSpacing="Single" firstLineIndent="0"/>
+				</textElement>
+				<text><![CDATA[Parecer técnico]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="86" y="170" width="425" height="32" uuid="9844a276-6ba2-4193-a6f0-5e2dcc00762e">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box topPadding="15" bottomPadding="15">
+					<pen lineColor="#005CAA"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#005CAA"/>
+				</box>
+				<subreport>
+					<reportElement x="0" y="-8" width="425" height="23" uuid="07593405-645a-456e-b6d3-0bffec6d83f1">
+						<property name="com.jaspersoft.studio.unit.y" value="mm"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{disposicaoFinal})]]></dataSourceExpression>
+					<subreportExpression><![CDATA["disposicaoFinal2.jasper"]]></subreportExpression>
+				</subreport>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="40">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<line>
+				<reportElement x="0" y="5" width="595" height="1" uuid="cc671267-139b-4c7c-9f5f-4fa52ba9867a">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="5.0" lineStyle="Solid" lineColor="#005CAA"/>
+				</graphicElement>
+			</line>
+			<image scaleImage="RetainShape" hAlign="Left" vAlign="Middle" onErrorType="Blank">
+				<reportElement x="50" y="12" width="150" height="20" uuid="356fef60-bd86-4e20-a39c-f339377d7a2c">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA["http://localhost:3000/cliente/"+
+$P{laudo}.getMaquina().getCliente().getId()+
+"/imagem/"+
+$P{laudo}.getMaquina().getCliente().getImagem()]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

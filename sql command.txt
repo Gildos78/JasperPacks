@@ -1,0 +1,4 @@
+insert into usuario(nome, email, senha, cargo, habilitacao, crea) values ("Daniel", "daniel@email.com", "103fadb3be608826d2386d700cae3cec","Responsável Técnico", "admin", "");
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+flush privileges;
